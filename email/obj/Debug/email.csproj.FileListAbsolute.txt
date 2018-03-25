@@ -1,0 +1,6 @@
+E:\Web\email\email\bin\email.dll.config
+E:\Web\email\email\bin\email.dll
+E:\Web\email\email\bin\email.pdb
+E:\Web\email\email\obj\Debug\email.csprojResolveAssemblyReference.cache
+E:\Web\email\email\obj\Debug\email.dll
+E:\Web\email\email\obj\Debug\email.pdb
