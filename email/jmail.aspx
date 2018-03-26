@@ -18,8 +18,13 @@
         <p>
             邮件内容：<asp:TextBox ID="TextBox3" runat="server" TextMode="MultiLine"></asp:TextBox>
         </p>
+        抄送：<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="发送邮件" />
+        <br />
+        附件：<asp:FileUpload ID="FileUpload1" runat="server" />
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="发送邮件" style="height: 21px" />
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="重新填写" />
     </form>
 </body>
