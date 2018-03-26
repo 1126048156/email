@@ -17,7 +17,7 @@ namespace email
         protected void Button1_Click(object sender, EventArgs e)
         {
             MailMessage mymail=new MailMessage();//声明一个mail对象
-            mymail.From=new MailAddress("xxxx@163.com","your name");//发件人地址
+            mymail.From=new MailAddress("xxxx@163.com","your name");//发件人地址,姓名
             mymail.To.Add(new MailAddress(TextBox1.Text));//收件人地址
             mymail.Subject=TextBox2.Text;//邮件主题
             mymail.Body=TextBox3.Text;//发送邮件的内容
