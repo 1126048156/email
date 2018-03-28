@@ -1,9 +1,0 @@
-E:\Web\email\email\bin\email.dll.config
-E:\Web\email\email\bin\email.dll
-E:\Web\email\email\bin\email.pdb
-E:\Web\email\email\obj\Debug\email.csprojResolveAssemblyReference.cache
-E:\Web\email\email\obj\Debug\email.dll
-E:\Web\email\email\obj\Debug\email.pdb
-E:\Web\email\email\obj\Debug\Interop.jmail.dll
-E:\Web\email\email\obj\Debug\email.csproj.ResolveComReference.cache
-E:\Web\email\email\bin\Interop.jmail.dll

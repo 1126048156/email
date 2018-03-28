@@ -20,7 +20,11 @@
         <p>
             时间：<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
         </p>
-        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Label" Visible="False"></asp:Label>
+        <br />
+        <br />
+        <asp:Label ID="Label5" runat="server" Text="附件：" Visible="False"></asp:Label>
+        <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>

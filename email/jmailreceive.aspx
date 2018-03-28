@@ -6,27 +6,38 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <style type="text/css">
-        .style1 {
-           cursor:pointer;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-                   使用jmail接收邮件<asp:LinkButton ID="LinkButton1" runat="server">接收邮件</asp:LinkButton>            
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"  DataKeyNames="id" DataSourceID="SqlDataSource1"  PageSize="18" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound" class="style">
-                        <Columns>
-                            <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                            <asp:BoundField DataField="sendmail" HeaderText="sendmail" SortExpression="sendmail" />
-                            <asp:BoundField DataField="mailtitle" HeaderText="mailtitle" SortExpression="mailtitle" />
-                            <asp:BoundField DataField="mailcontents" HeaderText="mailcontents" SortExpression="mailcontents" />
-                            <asp:BoundField DataField="mailtime" HeaderText="mailtime" SortExpression="mailtime" />
-                        </Columns>
-                    </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:jmailConnectionString %>" SelectCommand="SELECT * FROM [tb_JMail] ORDER BY [id] DESC"></asp:SqlDataSource>           
+                   使用jmail接收邮件<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">接收邮件</asp:LinkButton>            
+                   
     </div>
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"  DataKeyNames="id"  PageSize="18" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDataBound="GridView1_RowDataBound" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <AlternatingRowStyle BackColor="White" />
+                        <Columns>
+                            <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True"  />
+                            <asp:BoundField DataField="sendmail" HeaderText="sendmail" />
+                            <asp:BoundField DataField="mailtitle" HeaderText="mailtitle"/>
+                            <asp:TemplateField HeaderText="mailcontents">
+                               
+                                <ItemTemplate>
+                                    <asp:Label ID="Label1" runat="server" Text='<%# MyContent((string)Eval("mailcontents"))%>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="mailtime" HeaderText="mailtime" DataFormatString="{0:d}" />
+                        </Columns>
+                        <EditRowStyle BackColor="#2461BF" />
+                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#EFF3FB" />
+                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                    </asp:GridView>
     </form>
 </body>
 </html>
